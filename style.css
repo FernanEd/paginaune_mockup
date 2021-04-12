@@ -1,0 +1,58 @@
+:root {
+  --rojo: #a02d3d;
+  --dorado: #d5b93a;
+  --dark: #202020;
+  --footer: #202020;
+  --light: #fff;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+header ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#nav-top {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+#nav-top ul {
+  display: flex;
+}
+
+#nav-top ul li {
+  padding: 0.25rem;
+}
+
+#main-header {
+  background-color: var(--dorado);
+}
+
+footer {
+  background-color: var(--footer);
+  color: var(--light);
+}
+
+.selected {
+  background-color: var(--rojo);
+}
