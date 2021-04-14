@@ -78,3 +78,33 @@ function previousSlide(index) {
   current.style.animation = `fade-in 0.4s ease`;
   current.style.zIndex = "-8";
 }
+
+// DROPDOWN
+
+//This is horrible code, I wasnt even thinking at this point
+
+const $dropdowns = document.querySelectorAll(".dropdown");
+
+$dropdowns.forEach(($dropdown) => {
+  const $desc = $dropdown.querySelector(".dropdown-desc");
+  const $list = $dropdown.querySelector(".dropdown-list");
+
+  let firstTime = 0;
+
+  $desc.addEventListener("click", (e) => {
+    if ($list.style.display == "none" || firstTime === 0) {
+      closeEveryDropdown();
+      $list.style.display = "block";
+      firstTime++;
+    } else {
+      $list.style.display = "none";
+    }
+  });
+});
+
+const closeEveryDropdown = () => {
+  $dropdowns.forEach(($dropdown) => {
+    const $list = $dropdown.querySelector(".dropdown-list");
+    $list.style.display = "none";
+  });
+};
